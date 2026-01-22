@@ -10,7 +10,7 @@ buy:
   usa: https://www.amazon.com/-/es/Hundred-Solitude-Harper-Perennial-Classics/dp/0060883286?crid=H9KKQRS1VCTL&dib=eyJ2IjoiMSJ9.g2hyWyIYGWXWOLUjXbgKu2vf2O3BsBjfvNt-hC-rjiQvrmT4UC_KacsY62dJ80Tp451JrClltUbeRAjCOY56xAnU3QJbO41bN_auJZWYeyDhPi4aOAgq0l8UhiDzmGZQq8YIdwVkND4BWFzJqPTh4aStIoiI2KncxjVWRbItGUl3BdvUjQUJELoIadFmHmzc0lOJhUu13fObHekA-atSBpEYBPuXD86cgygkcfB0DME.KiagxdgQkVrIEYjud4RniNpxLGThOt7jmUDgvroce-M&dib_tag=se&keywords=cien+a%C3%B1os+de+soledad+gabriel+garcia+marquez+english&qid=1738468444&sprefix=cien+a%C3%B1os+de+soledad+gabriel+garcia+marquez+%2Caps%2C220&sr=8-1
 ---
 
-**ESPAÑOL DESCRIPCION**
+**ESPAÑOL DESCRIPCIÓN**
 
 Ahora una serie de Netflix
 
