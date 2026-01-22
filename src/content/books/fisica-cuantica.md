@@ -27,5 +27,3 @@ buy:
 
 - Estudiantes de ciencias que buscan una introducción amigable a la física cuántica.
 - Personas curiosas interesadas en entender los fundamentos del mundo cuántico sin necesidad de conocimientos avanzados.
-
-

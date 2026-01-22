@@ -18,6 +18,18 @@
 		{
 			"src": "^/_image/?$",
 			"dest": "_render"
+		},
+		{
+			"src": "^/about/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/booksDevs/?$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/contact/?$",
+			"dest": "_render"
 		}
 	]
 }
