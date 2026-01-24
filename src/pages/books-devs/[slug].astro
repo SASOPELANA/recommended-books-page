@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 }
 
 const { book } = Astro.props;
-const { data, id } = book;
+const { data, slug } = book;
 const { title, author, img, readtime, buy } = data;
 
 // Renderizar el contenido del libro
@@ -33,7 +33,7 @@ export const prerender = true;
         ⏪ Volver
       </a>
       <img
-        transition:name={`img-${id}`}
+        transition:name={`img-${slug}`}
         class="rounded w-72 h-auto max-md:w-48"
         src={new URL(img, import.meta.url).pathname}
         alt={title}
@@ -41,7 +41,7 @@ export const prerender = true;
 
       <!-- Enlaces de compra -->
       <!-- Unico componente dinamico y no estatica, renderizarse en el cliente -->
-      <BookScore server:defer id={id}>
+      <BookScore server:defer id={slug}>
         <span slot="fallback" class="text-xs opacity-70">
           Cargando puntuación...
         </span>
@@ -52,21 +52,21 @@ export const prerender = true;
 
     <main class="max-w-3xl max-md:max-w-full max-md:order-1">
       <h1
-        transition:name={`title-${id}`}
+        transition:name={`title-${slug}`}
         class="text-4xl font-bold mb-4 max-md:text-2xl"
       >
         {title}
       </h1>
 
       <p
-        transition:name={`author-${id}`}
+        transition:name={`author-${slug}`}
         class="text-gray-100 mb-4 max-md:text-sm font-semibold"
       >
         Autor: {author}
       </p>
 
       <p
-        transition:name={`readtime-${id}`}
+        transition:name={`readtime-${slug}`}
         class="text-gray-100 mb-4 max-md:text-sm font-semibold"
       >
         Tiempo de Lectura: {readtime}
