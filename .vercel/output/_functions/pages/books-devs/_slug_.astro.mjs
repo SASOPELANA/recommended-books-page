@@ -1,5 +1,4 @@
-import { c as createComponent, r as renderTemplate } from '../../chunks/astro/server_DJ6Zegtw.mjs';
-import 'clsx';
+import { c as createComponent, r as renderTemplate } from '../../chunks/astro/server_DvA6j1nc.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$slug = createComponent(($$result, $$props, $$slots) => {

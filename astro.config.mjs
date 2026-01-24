@@ -3,9 +3,6 @@ import { defineConfig, envField } from "astro/config";
 // import mdx from '@astrojs/mdx';
 import tailwindcss from "@tailwindcss/vite";
 
-// Importa el adaptador de Node, que soporta el preview.
-import node from "@astrojs/node";
-
 import vercel from "@astrojs/vercel";
 
 // En este ejemplo, se elimina la asignación del adaptador de Vercel.

@@ -1,6 +1,5 @@
-import { c as createComponent, m as maybeRenderHead, b as addAttribute, r as renderTemplate, a as renderComponent } from '../chunks/astro/server_DJ6Zegtw.mjs';
-import { $ as $$Layout } from '../chunks/Layout_DqB6TdSc.mjs';
-import 'clsx';
+import { c as createComponent, m as maybeRenderHead, b as addAttribute, r as renderTemplate, a as renderComponent } from '../chunks/astro/server_DvA6j1nc.mjs';
+import { $ as $$Layout } from '../chunks/Layout_ByhcEpQ7.mjs';
 export { renderers } from '../renderers.mjs';
 
 const BooksImg = new Proxy({"src":"/_astro/books-recomendados.OhFqwyeO.jpg","width":556,"height":550,"format":"jpg"}, {
