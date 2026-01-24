@@ -1,9 +1,45 @@
-import { c as createComponent, r as renderTemplate } from '../chunks/astro/server_C6-rqar_.mjs';
+import { c as createComponent, m as maybeRenderHead, b as addAttribute, r as renderTemplate, a as renderComponent } from '../chunks/astro/server_DJ6Zegtw.mjs';
+import { $ as $$Layout } from '../chunks/Layout_DqB6TdSc.mjs';
 import 'clsx';
 export { renderers } from '../renderers.mjs';
 
+const BooksImg = new Proxy({"src":"/_astro/books-recomendados.OhFqwyeO.jpg","width":556,"height":550,"format":"jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "/home/sergio/Escritorio/recommended-books-page/src/assets/images/books-recomendados.jpg";
+							}
+							
+							return target[name];
+						}
+					});
+
+const $$About$1 = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${maybeRenderHead()}<section class="relative bg-gradient-to-r from-gray-600 via-gray-400 to-gray-800 py-16 px-8 overflow-hidden -z-10"> <!-- SVG Pattern Background --> <div class="absolute inset-0 w-full h-full -z-10"> <svg class="w-full h-full" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"> <defs> <pattern id="dots" patternUnits="userSpaceOnUse" width="40" height="40" patternTransform="rotate(45)"> <circle cx="10" cy="10" r="2" fill="#3B82F6" opacity="0.1"></circle> </pattern> </defs> <rect width="1440" height="800" fill="url(#dots)"></rect> </svg> </div> <!-- Content Container --> <div class="max-w-7xl mx-auto relative z-20 grid md:grid-cols-2 gap-12 items-center"> <!-- Text Content --> <div class="p-8 bg-white bg-opacity-90 rounded-xl shadow-lg backdrop-blur-lg hover:scale-105 transform transition duration-300 ease-in-out"> <h2 class="text-4xl font-extrabold text-gray-800 mb-4">About Us</h2> <p class="text-gray-600 mb-6 text-lg">
+We craft innovative digital experiences that elevate your brand and
+        inspire your audience. Our passionate team leverages creativity and
+        cutting-edge technology to bring your vision to life with precision and
+        style.
+</p> <div class="space-y-6"> <!-- Card for each feature --> <div class="flex items-center space-x-4 p-4 bg-gradient-to-tr from-purple-200 via-blue-200 to-green-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"> <div class="p-3 bg-white rounded-full shadow-lg hover:scale-110 transform transition duration-300"> <!-- Icon: Users --> <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24"> <path d="M17 20v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2H17z"></path> <circle cx="12" cy="8" r="4"></circle> </svg> </div> <div> <h3 class="text-xl font-semibold text-gray-700">Dedicated Team</h3> <p class="text-gray-500 text-sm">
+A passionate group of experts committed to delivering excellence
+              in every project.
+</p> </div> </div> <div class="flex items-center space-x-4 p-4 bg-gradient-to-tr from-purple-200 via-blue-200 to-green-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"> <div class="p-3 bg-white rounded-full shadow-lg hover:scale-110 transform transition duration-300"> <!-- Icon: Lightbulb --> <svg class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 24 24"> <path d="M9 21h6v-1H9v1zm3-18a4 4 0 00-4 4c0 1.38.56 2.63 1.46 3.54A5.978 5.978 0 009 12h6a5.978 5.978 0 00-1.46-3.46A4 4 0 0015 7a4 4 0 00-4-4z"></path> </svg> </div> <div> <h3 class="text-xl font-semibold text-gray-700">
+Innovative Approach
+</h3> <p class="text-gray-500 text-sm">
+We embrace creativity and technology to craft unique solutions
+              tailored for you.
+</p> </div> </div> <div class="flex items-center space-x-4 p-4 bg-gradient-to-tr from-purple-200 via-blue-200 to-green-200 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"> <div class="p-3 bg-white rounded-full shadow-lg hover:scale-110 transform transition duration-300"> <!-- Icon: User Group --> <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24"> <path d="M16 14c-1.33 0-2.53.53-3.41 1.39A4.993 4.993 0 0012 20c1.33 0 2.53-.53 3.41-1.39A4.993 4.993 0 0016 14zM8 14c-1.33 0-2.53.53-3.41 1.39A4.993 4.993 0 004 20c1.33 0 2.53-.53 3.41-1.39A4.993 4.993 0 008 14zM12 4c-2.21 0-4 1.79-4 4 0 1.66 1.34 3 3 3h2c1.66 0 3-1.34 3-3 0-2.21-1.79-4-4-4z"></path> </svg> </div> <div> <h3 class="text-xl font-semibold text-gray-700">
+Customer Centric
+</h3> <p class="text-gray-500 text-sm">
+Your satisfaction is our priority — we listen, adapt, and deliver
+              beyond expectations.
+</p> </div> </div> </div> </div> <!-- Image with Overlay & Hover Effect --> <div class="relative p-4"> <div class="absolute inset-0 bg-gradient-to-br from-purple-400 via-blue-400 to-green-400 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300"></div> <img${addAttribute(BooksImg.src, "src")} alt="About Us" class="relative rounded-xl shadow-xl object-cover w-full h-full hover:opacity-90 transition-opacity duration-300"> </div> </div> </section>`;
+}, "/home/sergio/Escritorio/recommended-books-page/src/components/About.astro", void 0);
+
 const $$About = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate``;
+  return renderTemplate`${renderComponent($$result, "Layout", $$Layout, { "title": "Sobre Nosotros" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section> ${renderComponent($$result2, "AboutComponent", $$About$1, {})} </section> ` })}`;
 }, "/home/sergio/Escritorio/recommended-books-page/src/pages/about.astro", void 0);
 
 const $$file = "/home/sergio/Escritorio/recommended-books-page/src/pages/about.astro";

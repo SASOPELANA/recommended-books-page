@@ -1,9 +1,9 @@
 # Dependencies
-/node_modules/
+node_modules/
 
 # Build artifacts
-/dist/
-/.astro/
+dist/
+.astro/
 
 # Environment variables
 .env
@@ -26,4 +26,4 @@ ehthumbs.db
 Thumbs.db
 
 # VSCode
-/.vscode/
+.vscode/
