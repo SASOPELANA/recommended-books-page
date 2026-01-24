@@ -1,7 +1,6 @@
 ---
-import { getCollection, render } from "astro:content";
+import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import AmazonLogo from "@/components/ui/AmazonLogo.astro";
 import BookScore from "../../components/BookScore.astro";
 import BuyButton from "../../components/BuyButton.astro";
 
@@ -18,7 +17,7 @@ export async function getStaticPaths() {
 
 const { book } = Astro.props;
 const { data, slug } = book;
-const { title, author, img, readtime, description, buy } = data;
+const { title, author, img, readtime, buy } = data;
 
 // Error corregido
 const { Content } = await book.render();
@@ -58,6 +57,21 @@ export const prerender = true;
       >
         {title}
       </h1>
+
+      <p
+        transition:name={`author-${slug}`}
+        class="text-gray-100 mb-4 max-md:text-sm font-semibold"
+      >
+        Autor: {author}
+      </p>
+
+      <p
+        transition:name={`readtime-${slug}`}
+        class="text-gray-100 mb-4 max-md:text-sm font-semibold"
+      >
+        Tiempo de Lectura: {readtime}
+      </p>
+
       <div class="prose prose-invert max-md:prose-sm">
         <Content />
       </div>

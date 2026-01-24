@@ -22,7 +22,7 @@ export const prerender = true;
           {
             books.map((book) => {
               const { slug, data } = book;
-              const { title, author, img, readtime, description, buy } = data;
+              const { title, img, readtime, description } = data;
 
               return (
                 <article

@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig, envField } from "astro/config";
-// import mdx from '@astrojs/mdx';
+import mdx from "@astrojs/mdx";
 import tailwindcss from "@tailwindcss/vite";
 
 import vercel from "@astrojs/vercel";
@@ -10,7 +10,7 @@ export default defineConfig({
   output: "server",
   adapter: vercel(),
   vite: { plugins: [tailwindcss()] },
-  // integrations: [mdx()],
+  integrations: [mdx()],
   env: {
     schema: {
       SHOW_BUY_BUTTON: envField.boolean({

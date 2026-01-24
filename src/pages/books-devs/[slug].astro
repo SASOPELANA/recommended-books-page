@@ -1,0 +1,80 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import BookScore from "../../components/BookScore.astro";
+import BuyButton from "../../components/BuyButton.astro";
+
+// CARGAMOS LAS VARIABLES DE ENVIORNMENT - ENTORNO
+import { SHOW_BUY_BUTTON } from "astro:env/server";
+
+export async function getStaticPaths() {
+  const books = await getCollection("books-devs");
+  return books.map((book) => ({
+    params: { slug: book.slug || book.id },
+    props: { book },
+  }));
+}
+
+const { book } = Astro.props;
+const { data, id } = book;
+const { title, author, img, readtime, buy } = data;
+
+// Renderizar el contenido del libro
+const { Content } = await book.render();
+
+// si tenemos que renderizar el contenido de la página, para que sea estatica y no se cargue cada vez
+export const prerender = true;
+---
+
+<Layout title={`${title} - Libros`}>
+  <div class="flex gap-12 max-md:flex-col max-md:gap-6">
+    <aside class="flex flex-col gap-4 items-center max-md:order-2">
+      <a href="/booksDevs" class="hover:underline opacity-70 hover:font-bold">
+        ⏪ Volver
+      </a>
+      <img
+        transition:name={`img-${id}`}
+        class="rounded w-72 h-auto max-md:w-48"
+        src={new URL(img, import.meta.url).pathname}
+        alt={title}
+      />
+
+      <!-- Enlaces de compra -->
+      <!-- Unico componente dinamico y no estatica, renderizarse en el cliente -->
+      <BookScore server:defer id={id}>
+        <span slot="fallback" class="text-xs opacity-70">
+          Cargando puntuación...
+        </span>
+      </BookScore>
+
+      {SHOW_BUY_BUTTON && <BuyButton server:defer buy={buy} />}
+    </aside>
+
+    <main class="max-w-3xl max-md:max-w-full max-md:order-1">
+      <h1
+        transition:name={`title-${id}`}
+        class="text-4xl font-bold mb-4 max-md:text-2xl"
+      >
+        {title}
+      </h1>
+
+      <p
+        transition:name={`author-${id}`}
+        class="text-gray-100 mb-4 max-md:text-sm font-semibold"
+      >
+        Autor: {author}
+      </p>
+
+      <p
+        transition:name={`readtime-${id}`}
+        class="text-gray-100 mb-4 max-md:text-sm font-semibold"
+      >
+        Tiempo de Lectura: {readtime}
+      </p>
+
+      <div class="prose prose-invert max-md:prose-sm">
+        <Content />
+      </div>
+    </main>
+  </div>
+</Layout>
